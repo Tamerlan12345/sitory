@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lodzki style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+    <div class="page-shell">
+      <header class="hero section">
+        <div class="hero__eyebrow">Launch-ready starter</div>
+        <h1>Lodzki style</h1>
+        <p class="hero__subtitle">
+          Production-style baseline generated from your task request. Replace copy and visuals, keep the structure.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#preview">Open Preview</a>
+          <a class="btn btn--ghost" href="#roadmap">Implementation Plan</a>
+        </div>
+      </header>
+
+      <section id="preview" class="section grid grid--3">
+        <article class="card feature">
+          <h2>Design Tokens</h2>
+          <p>Color variables, type scale, spacing rhythm, and card language are already defined for extension.</p>
+        </article>
+        <article class="card feature">
+          <h2>Responsive First</h2>
+          <p>Layout is tuned for mobile, tablet, and desktop breakpoints without requiring extra libraries.</p>
+        </article>
+        <article class="card feature">
+          <h2>Deploy Ready</h2>
+          <p>Static assets are prepared for Nginx and Railway deployment flow with a stable runtime shape.</p>
+        </article>
+      </section>
+
+      <section id="roadmap" class="section card roadmap">
+        <div>
+          <h2>Execution Roadmap</h2>
+          <p>Use this as a high-signal handoff between PM, Developer, QA, and DevOps.</p>
+        </div>
+        <ol>
+          <li>Developer: replace placeholders with final UI content and interactions.</li>
+          <li>QA: validate visuals, responsiveness, and acceptance checks.</li>
+          <li>DevOps: deploy and confirm public domain evidence.</li>
+        </ol>
+      </section>
+
+      <section class="section stats">
+        <div class="stat card">
+          <div class="stat__label">Components</div>
+          <div class="stat__value" data-counter="12">0</div>
+        </div>
+        <div class="stat card">
+          <div class="stat__label">Quality Checks</div>
+          <div class="stat__value" data-counter="18">0</div>
+        </div>
+        <div class="stat card">
+          <div class="stat__label">Deploy Targets</div>
+          <div class="stat__value" data-counter="3">0</div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Generated with GitHub + Railway workflow</span>
+        <span id="year"></span>
+      </footer>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
