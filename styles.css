@@ -1,0 +1,238 @@
+:root {
+  --bg: #09040f;
+  --bg-accent: #1a1230;
+  --panel: #120a1f;
+  --panel-soft: #1a112a;
+  --text: #f7f1ff;
+  --muted: #d2c6e7;
+  --primary: #ff4477;
+  --secondary: #2de2e6;
+  --stroke: rgba(255, 255, 255, 0.12);
+  --radius-lg: 22px;
+  --radius-md: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(1100px 600px at 8% -10%, #302152 0%, transparent 60%),
+    radial-gradient(900px 500px at 95% 0%, #2f0c2e 0%, transparent 62%),
+    linear-gradient(180deg, var(--bg-accent) 0%, var(--bg) 52%);
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  margin: 0;
+}
+
+.page-shell {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+  padding: 38px 0 54px;
+}
+
+.section {
+  margin-top: 24px;
+}
+
+.hero {
+  position: relative;
+  padding: 34px;
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, rgba(255, 68, 119, 0.16), rgba(18, 10, 31, 0.82));
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.32);
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffd8e6;
+  border: 1px solid rgba(255, 68, 119, 0.5);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: rgba(255, 68, 119, 0.15);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin-top: 14px;
+}
+
+.hero__subtitle {
+  margin: 14px 0 0;
+  color: var(--muted);
+  max-width: 64ch;
+  line-height: 1.55;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn {
+  border-radius: 12px;
+  padding: 11px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  color: #fff4f8;
+  background: linear-gradient(120deg, var(--primary), #ff6d8a);
+  box-shadow: 0 12px 30px rgba(255, 68, 119, 0.35);
+}
+
+.btn--ghost {
+  color: #dafcff;
+  border: 1px solid rgba(45, 226, 230, 0.45);
+  background: rgba(45, 226, 230, 0.08);
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  border: 1px solid var(--stroke);
+  background: linear-gradient(170deg, rgba(26, 17, 42, 0.92), rgba(10, 7, 17, 0.96));
+  border-radius: var(--radius-md);
+  padding: 18px;
+}
+
+.feature h2 {
+  font-size: 1.1rem;
+}
+
+.feature p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.roadmap {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.roadmap p {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.roadmap ol {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.stat__label {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.stat__value {
+  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  margin-top: 8px;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+.footer {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: rgba(210, 198, 231, 0.82);
+}
+
+.bg-orb {
+  position: fixed;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.orb-1 {
+  top: -80px;
+  right: -90px;
+  background: #ff4477;
+}
+
+.orb-2 {
+  left: -120px;
+  bottom: -120px;
+  background: #2de2e6;
+}
+
+@media (max-width: 980px) {
+  .grid--3,
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(1100px, 94vw);
+    padding-top: 26px;
+  }
+
+  .hero {
+    padding: 24px 18px;
+  }
+
+  .grid--3,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
